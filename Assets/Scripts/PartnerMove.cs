@@ -39,7 +39,7 @@ public class PartnerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Go)
+        if (true)
         {
             Go = false;
             SetDestination(_destination);

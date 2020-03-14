@@ -56,6 +56,7 @@ public class UIElemDragger : MonoBehaviour
                     objectToDrag.GetComponent<TaskID>().order = objectToReplace.GetComponent<TaskID>().order;
                     objectToReplace.GetComponent<TaskID>().order = originalID;
 
+
                 }
                 else
                 {

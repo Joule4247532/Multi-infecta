@@ -11,6 +11,7 @@ public class UIElemDragger : MonoBehaviour
     private bool dragging = false;
 
     private Vector2 originPos;
+    private int originalID;
 
     private Transform objectToDrag;
     private Image objectToDragImage;
@@ -31,6 +32,7 @@ public class UIElemDragger : MonoBehaviour
                 objectToDrag.SetAsLastSibling();
 
                 originPos = objectToDrag.position;
+                originalID = objectToDrag.GetComponent<TaskID>().order;
                 objectToDragImage = objectToDrag.GetComponent<Image>();
                 objectToDragImage.raycastTarget = false;
             }
@@ -51,6 +53,9 @@ public class UIElemDragger : MonoBehaviour
                 {
                     objectToDrag.position = objectToReplace.position;
                     objectToReplace.position = originPos;
+                    objectToDrag.GetComponent<TaskID>().order = objectToReplace.GetComponent<TaskID>().order;
+                    objectToReplace.GetComponent<TaskID>().order = originalID;
+
                 }
                 else
                 {

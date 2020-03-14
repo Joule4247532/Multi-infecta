@@ -38,7 +38,7 @@ public class PlayerMouvement : MonoBehaviour
             rb.position += new Vector3(0, 0, -trueSpeed / 1000);
         }
 
-        rb.position = new Vector3(rb.position.x,0.75f,rb.position.z);
+        rb.position = new Vector3(rb.position.x,0.64f,rb.position.z);
     }
 
 }

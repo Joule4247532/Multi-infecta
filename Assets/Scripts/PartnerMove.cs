@@ -9,6 +9,7 @@ public class PartnerMove : MonoBehaviour
     Transform _destination;
 
     NavMeshAgent _navMeshAgent;
+    public bool Go = false;
 
 
     // Start is called before the first frame update
@@ -22,15 +23,15 @@ public class PartnerMove : MonoBehaviour
         }
         else
         {
-            SetDestination();
+            SetDestination(_destination);
         }
     }
 
-    private void SetDestination()
+    void SetDestination(Transform _target)
     {
-        if (_destination != null)
+        if (_target != null)
         {
-            Vector3 targetVector = _destination.transform.position;
+            Vector3 targetVector = _target.transform.position;
             _navMeshAgent.SetDestination(targetVector);
         }
     }
@@ -38,6 +39,10 @@ public class PartnerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Go)
+        {
+            Go = false;
+            SetDestination(_destination);
+        }
     }
 }

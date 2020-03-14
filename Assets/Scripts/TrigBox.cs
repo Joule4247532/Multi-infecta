@@ -5,7 +5,7 @@ public class TrigBox : MonoBehaviour
     public GameObject player;
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.name != "Player")
+        if (collider.name != "Player" || collider.name != "Partner")
         {
             player.GetComponent<PlayerMouvement>().col = true;
             
@@ -13,7 +13,7 @@ public class TrigBox : MonoBehaviour
     }
     void OnTriggerExit(Collider collider)
     {
-        if (collider.name != "Player")
+        if (collider.name != "Player" || collider.name != "Partner")
         {
             player.GetComponent<PlayerMouvement>().col = false;
         }

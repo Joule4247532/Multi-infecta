@@ -10,6 +10,7 @@ public class Infected : MonoBehaviour
     public int maxCures = 5;
     public Slider slider;
     public Text text;
+    public int cureVal;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -45,7 +46,11 @@ public class Infected : MonoBehaviour
     {
         if (cures < maxCures)
         {
-            cures+=3;
+            cures+=cureVal;
+            if (cures > maxCures)
+            {
+                cures = maxCures;
+            }
             SetCureNum(cures);
         }
     }

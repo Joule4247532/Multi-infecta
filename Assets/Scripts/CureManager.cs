@@ -16,17 +16,16 @@ public class CureManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(timer);
         if (timer <= 0f)
         {
             timer = UnityEngine.Random.Range(spawnDelayMinMax.x, spawnDelayMinMax.y);
-            SpawnCure();
+            SpawnCure(spawns[UnityEngine.Random.Range(0,spawns.Length)]);
         }
         timer -= Time.deltaTime;
     }
 
-    private void SpawnCure()
+    private void SpawnCure(Transform pos)
     {
-        throw new NotImplementedException();
+        Instantiate(cure, pos.position, cure.transform.rotation);
     }
 }

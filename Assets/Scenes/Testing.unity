@@ -3296,7 +3296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcccb7e61f49d28438cb20b2660d48a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cure: {fileID: 9177397212033348598, guid: 413db88fe0091494eb0de7e3a18d91db, type: 3}
+  cure: {fileID: 6488432036726259835, guid: 413db88fe0091494eb0de7e3a18d91db, type: 3}
   spawnDelayMinMax: {x: 2, y: 5}
 --- !u!1 &800535007
 GameObject:

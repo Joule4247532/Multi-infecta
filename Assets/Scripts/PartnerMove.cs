@@ -16,6 +16,7 @@ public class PartnerMove : MonoBehaviour
     void Start()
     {
         _navMeshAgent = this.GetComponent<NavMeshAgent>();
+        _navMeshAgent.updateUpAxis = false;
 
         if (_navMeshAgent == null)
         {

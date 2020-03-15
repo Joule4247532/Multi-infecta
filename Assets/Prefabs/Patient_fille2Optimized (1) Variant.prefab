@@ -41,8 +41,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4f93bbda315014da7de64c18bd9b86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destination: {fileID: 0}
   Go: 0
+  _target: {fileID: 0}
 --- !u!195 &1744131959
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -145,7 +145,12 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 0f28eadabff9d7340af3d9e3886f430a,
         type: 3}
       propertyPath: m_Name
-      value: Patient_fille2Optimized (1)
+      value: Patient_fille2Optimized (1) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0f28eadabff9d7340af3d9e3886f430a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Patients
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f28eadabff9d7340af3d9e3886f430a, type: 3}

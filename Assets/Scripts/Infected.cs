@@ -1,21 +1,47 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class Infected : MonoBehaviour
 {
     public float LVinfect = 0f;
     public int cures = 0;
-    
-    // Start is called before the first frame update
-    void Start()
+    public int maxCures = 5;
+
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.collider.tag == "Patients")
+        {
+            if (cures <= 0)
+            {
+                LVinfect += 10f;
+                collision.collider.GetComponent<PartnerMove>().die();
+            }
+            else
+            {
+                cures--;
+                collision.collider.GetComponent<PartnerMove>().live();
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GetCure()
     {
-        
+        if (cures < maxCures)
+        {
+            cures++;
+        }
+    }
+
+    private void Update()
+    {
+        if (LVinfect >= 100f)
+        {
+            weDie();
+        }
+    }
+
+    private void weDie()
+    {
+        throw new NotImplementedException();
     }
 }

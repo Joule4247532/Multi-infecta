@@ -4,17 +4,16 @@ using UnityEngine.AI;
 
 public class PartnerMove : MonoBehaviour
 {
-
-    [SerializeField]
-    Transform _destination;
-
     NavMeshAgent _navMeshAgent;
     public bool Go = false;
+
+    public Transform _target;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        _target = GameObject.FindGameObjectWithTag("Player").transform;
         _navMeshAgent = this.GetComponent<NavMeshAgent>();
         _navMeshAgent.updateUpAxis = false;
 
@@ -24,7 +23,7 @@ public class PartnerMove : MonoBehaviour
         }
         else
         {
-            SetDestination(_destination);
+            SetDestination(_target);
         }
     }
 
@@ -43,7 +42,19 @@ public class PartnerMove : MonoBehaviour
         if (true)
         {
             Go = false;
-            SetDestination(_destination);
+            SetDestination(_target);
         }
+    }
+
+    public void die()
+    {
+        this.tag = "Untagged";
+        throw new NotImplementedException();
+    }
+
+    public void live()
+    {
+        this.tag = "Untagged";
+        throw new NotImplementedException();
     }
 }

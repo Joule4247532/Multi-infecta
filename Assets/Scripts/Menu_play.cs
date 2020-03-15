@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Menu_play : MonoBehaviour
 {
     public GameObject Menu2;
-    public string Testing;
+    string Testing = "Testing";
     private void Start()
     {
         Menu2 = GameObject.Find("Menu_play2");

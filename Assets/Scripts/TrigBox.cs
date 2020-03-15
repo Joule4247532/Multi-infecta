@@ -5,17 +5,23 @@ public class TrigBox : MonoBehaviour
     public GameObject player;
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.name != "Player" || collider.tag != "Patient" || collider.tag != "Cures")
+        if (collider.transform.parent != null)
         {
-            player.GetComponent<PlayerMouvement>().col = true;
-            
+            if (collider.transform.parent.name == "Walls")
+            {
+                player.GetComponent<PlayerMouvement>().col = true;
+
+            }
         }
     }
     void OnTriggerExit(Collider collider)
     {
-        if (collider.name != "Player" || collider.name != "Patient" || collider.tag != "Cures")
+        if (collider.transform.parent != null)
         {
-            player.GetComponent<PlayerMouvement>().col = false;
+            if (collider.transform.parent.name == "Walls")
+            {
+                player.GetComponent<PlayerMouvement>().col = false;
+            }
         }
     }
 

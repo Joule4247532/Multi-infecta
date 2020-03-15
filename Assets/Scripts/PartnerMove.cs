@@ -49,12 +49,12 @@ public class PartnerMove : MonoBehaviour
     public void die()
     {
         this.tag = "Untagged";
-        throw new NotImplementedException();
+        Destroy(this.gameObject);
     }
 
     public void live()
     {
         this.tag = "Untagged";
-        throw new NotImplementedException();
+        Destroy(this.gameObject);
     }
 }

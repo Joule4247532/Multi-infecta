@@ -114,6 +114,5 @@ public class Spawner : MonoBehaviour
         }
         Transform _sp = spawnPoints[ Random.Range(0,spawnPoints.Length)];
         Instantiate(_patient, _sp.position, _sp.rotation);
-        Debug.Log("Spawning patient " + _patient.name);
     }
 }

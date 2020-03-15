@@ -15,7 +15,7 @@ public class Seringue : MonoBehaviour
 
     void DeleteSelf()
     {
-        Destroy(GameObject.Find(this.name));
+        Destroy(this.gameObject);
     }
 
     private void FixedUpdate()

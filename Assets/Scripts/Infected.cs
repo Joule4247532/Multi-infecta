@@ -1,12 +1,16 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Infected : MonoBehaviour
 {
     public float LVinfect = 0f;
     public int cures = 0;
     public int maxCures = 5;
-    public MonoBehaviour slider;
+    public Slider slider;
+    public Text text;
+    public int cureVal;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -15,23 +19,46 @@ public class Infected : MonoBehaviour
             if (cures <= 0)
             {
                 LVinfect += 10f;
-
+                SetInfectLV(LVinfect);
                 collision.collider.GetComponent<PartnerMove>().die();
             }
             else
             {
                 cures--;
+                SetCureNum(cures);
                 collision.collider.GetComponent<PartnerMove>().live();
             }
         }
+    }
+    
+
+    public void SetInfectLV(float lv)
+    {
+        lv = Mathf.Clamp(lv, 0f, 100f);
+        slider.value = lv;
+    }
+    public void SetCureNum(int c)
+    {
+        text.text = c + "x";
     }
 
     public void GetCure()
     {
         if (cures < maxCures)
         {
-            cures++;
+            cures+=cureVal;
+            if (cures > maxCures)
+            {
+                cures = maxCures;
+            }
+            SetCureNum(cures);
         }
+    }
+
+    private void Start()
+    {
+        SetInfectLV(0f);
+        SetCureNum(0);
     }
 
     private void Update()

@@ -8791,6 +8791,11 @@ PrefabInstance:
       propertyPath: maxCures
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8883838087571386246, guid: efdebdfcc330c4944a408a8c0b27e5f4,
+        type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 1127060901}
     - target: {fileID: 8883838087571386248, guid: efdebdfcc330c4944a408a8c0b27e5f4,
         type: 3}
       propertyPath: tr

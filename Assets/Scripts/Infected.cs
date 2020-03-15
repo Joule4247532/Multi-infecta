@@ -6,6 +6,7 @@ public class Infected : MonoBehaviour
     public float LVinfect = 0f;
     public int cures = 0;
     public int maxCures = 5;
+    public MonoBehaviour slider;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -14,6 +15,7 @@ public class Infected : MonoBehaviour
             if (cures <= 0)
             {
                 LVinfect += 10f;
+
                 collision.collider.GetComponent<PartnerMove>().die();
             }
             else

@@ -26,11 +26,11 @@ public class FollowPlayer : MonoBehaviour
     {
         if (Input.GetAxis("Mouse ScrollWheel") < 0 && amount <= 1)
         {
-            amount += Y;
+            amount -= Y;
         }
         if (Input.GetAxis("Mouse ScrollWheel") > 0 && amount >= -2)
         {
-            amount -= Y;
+            amount += Y;
         }
     }
 }

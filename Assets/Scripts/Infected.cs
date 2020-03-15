@@ -38,7 +38,7 @@ public class Infected : MonoBehaviour
     }
     public void SetCureNum(int c)
     {
-        //text.text = c + "x";
+        text.text = c + "x";
     }
 
     public void GetCure()

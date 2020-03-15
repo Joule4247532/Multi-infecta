@@ -9,8 +9,6 @@ public class Spawner : MonoBehaviour
     [System.Serializable]
     public class Wave
     {
-        public string name;
-        public Transform enemy;
         public int count;
         public float rate;
     }
@@ -19,6 +17,7 @@ public class Spawner : MonoBehaviour
     private int nextWave = 0;
 
     public Transform[] spawnPoints;
+    public GameObject[] patients;
 
     public float waveTimer = 5f;
     private float waveCountdown;
@@ -83,7 +82,7 @@ public class Spawner : MonoBehaviour
         {
             searchTimer = 1f;
 
-            if (GameObject.FindGameObjectsWithTag("Patients").Length == 0)
+            if (true)// GameObject.FindGameObjectsWithTag("Patients").Length == 0)
             {
                 return false;
             }
@@ -97,7 +96,7 @@ public class Spawner : MonoBehaviour
 
         for (int i = 0; i < _wave.count; i++)
         {
-            SpawnPatient(_wave.enemy);
+            SpawnPatient(patients[Random.Range(0, patients.Length)].transform);
             yield return new WaitForSeconds(1f / _wave.rate);
         }
 

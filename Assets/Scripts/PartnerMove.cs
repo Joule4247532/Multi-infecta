@@ -4,7 +4,6 @@ using UnityEngine.AI;
 
 public class PartnerMove : MonoBehaviour
 {
-
     NavMeshAgent _navMeshAgent;
     public bool Go = false;
 
@@ -45,5 +44,17 @@ public class PartnerMove : MonoBehaviour
             Go = false;
             SetDestination(_target);
         }
+    }
+
+    public void die()
+    {
+        this.tag = "Untagged";
+        throw new NotImplementedException();
+    }
+
+    public void live()
+    {
+        this.tag = "Untagged";
+        throw new NotImplementedException();
     }
 }

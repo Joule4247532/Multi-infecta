@@ -408,7 +408,8 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     loop: 0
-    output: {fileID: 24300002, guid: 758cae029033fef4092c3302e798f976, type: 2}
+    output: {fileID: 5236943722986136259, guid: 758cae029033fef4092c3302e798f976,
+      type: 2}
     source: {fileID: 0}
   - name: Theme2
     clip: {fileID: 8300000, guid: 43e8bc05a76bec44d8e9273ecbc9f354, type: 3}
@@ -423,7 +424,8 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     loop: 1
-    output: {fileID: 24300002, guid: 758cae029033fef4092c3302e798f976, type: 2}
+    output: {fileID: -3131458141283545979, guid: 758cae029033fef4092c3302e798f976,
+      type: 2}
     source: {fileID: 0}
 --- !u!4 &473472531
 Transform:

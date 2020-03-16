@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -20,6 +21,10 @@ public class LevelLoader : MonoBehaviour
     }
     public void LoadNextScene(int index)
     {
+        if (index > SceneManager.sceneCount || index < 0)
+        {
+            throw new Exception("Not a valid scene index");
+        }
         StartCoroutine(LoadLevel(index));
     }
 

@@ -13,10 +13,10 @@ public class Menu_about : MonoBehaviour
         About2.GetComponent<Renderer>().enabled = false;
     }
 
-    public void OnMouseDown()
+    /*public void OnMouseDown()
     {
         SceneManager.LoadScene(About);
-    }
+    }*/
     void OnMouseOver()
     {
         //gameObject.SetActive(false);

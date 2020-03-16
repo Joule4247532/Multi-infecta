@@ -25,7 +25,7 @@ public class Infected : MonoBehaviour
             {
                 LVinfect += infectLV;
                 SetInfectLV(LVinfect);
-                audioManager.GetComponent<AudioManager>().Play("SFX");
+                audioManager.GetComponent<AudioManager>().Play("k");
                 collision.collider.GetComponent<PartnerMove>().die();
             }
             else

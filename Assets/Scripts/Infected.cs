@@ -14,6 +14,8 @@ public class Infected : MonoBehaviour
     public Text text;
     public int cureVal;
     public float infectLV = 5f;
+    public GameObject audioManager;
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -23,6 +25,7 @@ public class Infected : MonoBehaviour
             {
                 LVinfect += infectLV;
                 SetInfectLV(LVinfect);
+                audioManager.GetComponent<AudioManager>().Play("SFX");
                 collision.collider.GetComponent<PartnerMove>().die();
             }
             else
@@ -63,6 +66,7 @@ public class Infected : MonoBehaviour
     {
         SetInfectLV(0f);
         SetCureNum(0);
+        audioManager = GameObject.FindGameObjectWithTag("audiomanager");
     }
 
     private void Update()

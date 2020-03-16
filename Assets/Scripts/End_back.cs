@@ -19,9 +19,9 @@ public class End_back : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Exit()
     {
-
+        Application.Quit();
     }
 
 }

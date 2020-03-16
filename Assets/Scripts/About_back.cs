@@ -19,8 +19,8 @@ public class About_back : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Go()
     {
-        
+        SceneManager.LoadScene("Testing");
     }
 }

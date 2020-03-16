@@ -14,7 +14,7 @@ public class End_back : MonoBehaviour
 
     public void Back()
     {
-        SceneManager.LoadScene(Testing);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
 
     }
 

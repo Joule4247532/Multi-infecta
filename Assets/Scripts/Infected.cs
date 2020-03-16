@@ -19,6 +19,7 @@ public class Infected : MonoBehaviour
     {
         if (collision.collider.tag == "Patients")
         {
+            GameObject.FindGameObjectWithTag("audiomanager").GetComponent<AudioManager>().Play("guerir");
             if (cures <= 0)
             {
                 LVinfect += infectLV;

@@ -14,6 +14,7 @@ public class End_back : MonoBehaviour
 
     public void Back()
     {
+        GameObject.FindGameObjectWithTag("audiomanager").GetComponent<AudioManager>().Play("btnhover");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
 
     }
@@ -21,6 +22,7 @@ public class End_back : MonoBehaviour
     // Update is called once per frame
     public void Exit()
     {
+        GameObject.FindGameObjectWithTag("audiomanager").GetComponent<AudioManager>().Play("btnhover");
         Application.Quit();
     }
 

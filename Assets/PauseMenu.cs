@@ -49,11 +49,14 @@ public class PauseMenu : MonoBehaviour
 
     private void Resume()
     {
-        Audio.GetComponent<VolumeSlider>().SetLP(22000);
-        gameUI.SetActive(true);
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
-        gamePaused = false;
+        if (!optionsActive)
+        {
+            Audio.GetComponent<VolumeSlider>().SetLP(22000);
+            gameUI.SetActive(true);
+            pauseMenuUI.SetActive(false);
+            Time.timeScale = 1f;
+            gamePaused = false;
+        }
     }
 
     public void Quit()

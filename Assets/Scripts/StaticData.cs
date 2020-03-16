@@ -11,7 +11,7 @@ public class StaticData : MonoBehaviour
     private void Awake()
     {
         cured = curedStatic;
-        gameTime = gameTimeStatic;
+        gameTime = (int) gameTimeStatic;
         score = (curedStatic * 20) - (int)(gameTimeStatic);
     }
 
@@ -19,5 +19,10 @@ public class StaticData : MonoBehaviour
     {
         curedStatic = cured;
         gameTimeStatic = gameTime;
+    }
+
+    public void Update()
+    {
+        score = (cured * 20) - (int)(gameTime);
     }
 }

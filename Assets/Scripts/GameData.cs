@@ -1,18 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameData : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject data;
+    private int cured;
 
-    // Update is called once per frame
-    void Update()
+    public void StoreData()
     {
-        
+        data.GetComponent<StaticData>().gameTime = Time.time - Time.timeSinceLevelLoad;
+        data.GetComponent<StaticData>().cured = cured;
+        data.GetComponent<StaticData>().storeData();
+    }
+    public void CountCured()
+    {
+        cured++;
     }
 }

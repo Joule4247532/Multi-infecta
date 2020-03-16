@@ -71,7 +71,7 @@ public class Infected : MonoBehaviour
         {
             weDie();
         }
-        if (Input.GetKeyDown("c"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (!(cures <= 0 || LVinfect <= 0))
             {

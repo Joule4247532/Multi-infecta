@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject gameUI;
     public GameObject optionsUI;
+    public GameObject Audio;
 
     // Update is called once per frame
     void Update()
@@ -34,10 +35,12 @@ public class PauseMenu : MonoBehaviour
     public void ResetTimeFreeze()
     {
         Time.timeScale = 1f;
+        Audio.GetComponent<VolumeSlider>().SetLP(22000);
     }
 
     private void Pause()
     {
+        Audio.GetComponent<VolumeSlider>().SetLP(500);
         gameUI.SetActive(false);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
@@ -46,6 +49,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Resume()
     {
+        Audio.GetComponent<VolumeSlider>().SetLP(22000);
         gameUI.SetActive(true);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -54,6 +58,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
+        Audio.GetComponent<VolumeSlider>().SetLP(22000);
         Application.Quit();
         Debug.Log("Quit");
     }

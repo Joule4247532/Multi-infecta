@@ -66,7 +66,7 @@ public class Spawner : MonoBehaviour
 
         if (nextWave + 1 > waves.Length - 1)
         {
-            nextWave = 0;
+            nextWave = waves.Length - 1;
             //End of waves
         }
         else

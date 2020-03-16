@@ -11,6 +11,7 @@ public class Infected : MonoBehaviour
     public Slider slider;
     public Text text;
     public int cureVal;
+    public float infectLV = 5f;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -18,7 +19,7 @@ public class Infected : MonoBehaviour
         {
             if (cures <= 0)
             {
-                LVinfect += 10f;
+                LVinfect += infectLV;
                 SetInfectLV(LVinfect);
                 collision.collider.GetComponent<PartnerMove>().die();
             }
@@ -66,6 +67,21 @@ public class Infected : MonoBehaviour
         if (LVinfect >= 100f)
         {
             weDie();
+        }
+        if (Input.GetKeyDown("c"))
+        {
+            if (!(cures <= 0 || LVinfect <= 0))
+            {
+                cures--;
+                LVinfect -= 10f;
+                if (LVinfect < 0f)
+                {
+                    LVinfect = 0f;
+                }
+                SetCureNum(cures);
+                SetInfectLV(LVinfect);
+            }
+
         }
     }
 

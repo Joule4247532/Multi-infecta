@@ -5244,6 +5244,10 @@ MonoBehaviour:
     rate: 1.5
   - count: 7
     rate: 2
+  - count: 10
+    rate: 3
+  - count: 15
+    rate: 3
   spawnPoints:
   - {fileID: 1544226967}
   - {fileID: 530914417}
@@ -9376,7 +9380,7 @@ PrefabInstance:
     - target: {fileID: 8883838087571386246, guid: efdebdfcc330c4944a408a8c0b27e5f4,
         type: 3}
       propertyPath: maxCures
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8883838087571386246, guid: efdebdfcc330c4944a408a8c0b27e5f4,
         type: 3}
@@ -9391,7 +9395,7 @@ PrefabInstance:
     - target: {fileID: 8883838087571386246, guid: efdebdfcc330c4944a408a8c0b27e5f4,
         type: 3}
       propertyPath: cureVal
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8883838087571386248, guid: efdebdfcc330c4944a408a8c0b27e5f4,
         type: 3}
@@ -9416,6 +9420,11 @@ PrefabInstance:
     - target: {fileID: 8883838087571386249, guid: efdebdfcc330c4944a408a8c0b27e5f4,
         type: 3}
       propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883838087571386255, guid: efdebdfcc330c4944a408a8c0b27e5f4,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8883838087717283201, guid: efdebdfcc330c4944a408a8c0b27e5f4,

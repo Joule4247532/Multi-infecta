@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Infected : MonoBehaviour
 {
+    public GameObject data;
     public float LVinfect = 0f;
     public int cures = 0;
     public int maxCures = 5;
@@ -28,6 +29,7 @@ public class Infected : MonoBehaviour
             {
                 cures--;
                 SetCureNum(cures);
+                data.GetComponent<GameData>().CountCured();
                 collision.collider.GetComponent<PartnerMove>().live();
             }
         }
@@ -88,6 +90,7 @@ public class Infected : MonoBehaviour
 
     private void weDie()
     {
+        data.GetComponent<GameData>().StoreData();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

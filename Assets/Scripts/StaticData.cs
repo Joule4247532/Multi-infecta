@@ -12,7 +12,7 @@ public class StaticData : MonoBehaviour
     {
         cured = curedStatic;
         gameTime = (int) gameTimeStatic;
-        score = (curedStatic * 20) - (int)(gameTimeStatic);
+        score = (curedStatic * 20) - (int)(gameTimeStatic * 2);
     }
 
     public void storeData()

@@ -6,7 +6,7 @@ public class GameData : MonoBehaviour
     private int cured;
     private float timeStart;
 
-    private void Awake()
+    private void Start()
     {
         timeStart = Time.time;
     }

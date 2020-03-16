@@ -10,13 +10,14 @@ public class Seringue : MonoBehaviour
     {
         audioManager = GameObject.FindGameObjectWithTag("audiomanager");
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             other.GetComponent<Infected>().GetCure();
+            audioManager.GetComponent<AudioManager>().Play("SFX");
             DeleteSelf();
-           audioManager.GetComponent<AudioManager>().Play("SFX");
         }
     }
 

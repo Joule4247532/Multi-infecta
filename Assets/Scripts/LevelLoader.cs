@@ -13,6 +13,7 @@ public class LevelLoader : MonoBehaviour
    
     public void OnMouseDown()
     {
+        GameObject.FindGameObjectWithTag("audiomanager").GetComponent<AudioManager>().Play("btn");
         LoadNextLevel();
     }
     public void LoadNextLevel()

@@ -12,6 +12,7 @@ public class Menu_options : MonoBehaviour
     }
     void OnMouseOver()
     {
+        sound();
         //gameObject.SetActive(false);
         gameObject.GetComponent<Renderer>().enabled = false;
         Options2.GetComponent<Renderer>().enabled = true;
@@ -20,7 +21,17 @@ public class Menu_options : MonoBehaviour
 
     void OnMouseExit()
     {
+        soundMade = false;
         gameObject.GetComponent<Renderer>().enabled = true;
         Options2.GetComponent<Renderer>().enabled = false;
+    }
+    private bool soundMade = false;
+    private void sound()
+    {
+        if (!soundMade)
+        {
+            GameObject.FindGameObjectWithTag("audiomanager").GetComponent<AudioManager>().Play("btnhover");
+            soundMade = true;
+        }
     }
 }

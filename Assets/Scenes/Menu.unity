@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 473472530}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: audiomanager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -421,9 +421,25 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SFX
     clip: {fileID: 8300000, guid: dc5b978e463b37147a1b60b84728fd4b, type: 3}
-    volume: 0.5
+    volume: 0.71
     pitch: 1
-    loop: 1
+    loop: 0
+    output: {fileID: -3131458141283545979, guid: 758cae029033fef4092c3302e798f976,
+      type: 2}
+    source: {fileID: 0}
+  - name: btnhover
+    clip: {fileID: 8300000, guid: d0bf4aac50412a6418ea95cc3826245f, type: 3}
+    volume: 0.71
+    pitch: 1
+    loop: 0
+    output: {fileID: -3131458141283545979, guid: 758cae029033fef4092c3302e798f976,
+      type: 2}
+    source: {fileID: 0}
+  - name: btn
+    clip: {fileID: 8300000, guid: 742e750d7f3a3fd4e9e8d22a05a5127b, type: 3}
+    volume: 0.71
+    pitch: 1
+    loop: 0
     output: {fileID: -3131458141283545979, guid: 758cae029033fef4092c3302e798f976,
       type: 2}
     source: {fileID: 0}
@@ -790,7 +806,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -1264,7 +1280,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 345.6, y: -233.8}
+  m_AnchoredPosition: {x: 324, y: -215}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717994605
@@ -1319,6 +1335,17 @@ MonoBehaviour:
           m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 473472530}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: btn
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1717994606

@@ -21,7 +21,7 @@ public class LevelLoader : MonoBehaviour
     }
     public void LoadNextScene(int index)
     {
-        if (index > SceneManager.sceneCount || index < 0)
+        if (index > SceneManager.sceneCountInBuildSettings || index < 0)
         {
             throw new Exception("Not a valid scene index");
         }
